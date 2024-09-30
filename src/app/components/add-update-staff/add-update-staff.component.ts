@@ -3,8 +3,6 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import * as data from '../../../assets/add-user-form.json'
 import { FormControlObject } from 'src/app/models/Forms';
 import { DataBaseService } from 'src/app/services/data-base.service';
-import { User } from 'src/app/models/User';
-import { retry } from 'rxjs/operators';
 import { RegexPatters } from 'src/app/core/patern/regex-patterns';
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component, ElementRef, EventEmitter, OnInit, OnDestroy, Output, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/core/auth/authentication.service';
-import { AttendanceModel, User } from 'src/app/models/User';
+import { AttendanceModel } from 'src/app/models/User';
 import { AttendanceService } from 'src/app/services/attendance.service';
 import { CommonService } from 'src/app/services/common.service';
 

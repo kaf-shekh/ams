@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/core/auth/authentication.service';
-import { User } from 'src/app/models/User';
 import { DataBaseService } from 'src/app/services/data-base.service';
 
 
