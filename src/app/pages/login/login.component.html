@@ -14,7 +14,6 @@
                     [ngClass]="{ 'is-invalid': isSubmitted && formGroup['controls'].email?.errors}">
                     <label for="email" class="form-label">Email</label>
                   </div>
-                  {{formGroup['controls'].email?.errors|json}}
                   <div class=" text-danger" *ngIf="isSubmitted && formGroup['controls'].email?.errors?.required">
                     Email is required</div>
                   <div class=" text-danger" *ngIf="isSubmitted && formGroup['controls'].email?.errors?.email">
