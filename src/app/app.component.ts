@@ -28,7 +28,7 @@ export class AppComponent {
       localStorage.setItem("ams_setting", JSON.stringify(app_setting.default));
     }
 
-    if (true) {
+    if (usersDB) {
       let ams_users: any = users;
       localStorage.setItem("ams_users", JSON.stringify(ams_users.default));
     }
