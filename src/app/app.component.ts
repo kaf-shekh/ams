@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import * as userPermissionData from "../assets/user-permission.json";
+import * as setting from "../assets/migration/setting.json";
+import * as users from "../assets/migration/user.json";
+import * as attendances from "../assets/migration/attendance.json";
+
 
 @Component({
   selector: 'app-root',
@@ -7,4 +12,30 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ams';
+  constructor() {
+    let permission = localStorage.getItem("ams_user_permission");
+    let ams_setting = localStorage.getItem("ams_setting");
+    let usersDB = localStorage.getItem("ams_users");
+    let attendanceList = localStorage.getItem("ams_attendance_list");
+
+    if (!permission) {
+      let user_permission: any = userPermissionData
+      localStorage.setItem("ams_user_permission", JSON.stringify(user_permission?.default));
+    }
+
+    if (!ams_setting) {
+      let app_setting: any = setting;
+      localStorage.setItem("ams_setting", JSON.stringify(app_setting.default));
+    }
+
+    if (true) {
+      let ams_users: any = users;
+      localStorage.setItem("ams_users", JSON.stringify(ams_users.default));
+    }
+
+    if (!attendanceList) {
+      let attendance_list: any = attendances
+      localStorage.setItem("ams_attendance_list", JSON.stringify(attendance_list.default));
+    }
+  }
 }

@@ -1,0 +1,23 @@
+/* .modal-body {
+    z-index: -1;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-open .modal {
+     z-index: 1050;
+  } */
+   
+  /* .img-responsive.mobile {
+    display: none;
+  }
+  
+  @media only screen and (max-device-width: 480px) {
+    .img-responsive {
+      display: none;
+    }
+    .img-responsive.mobile {
+      display: block;
+    }
+  } */

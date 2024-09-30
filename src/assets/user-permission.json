@@ -1,0 +1,37 @@
+{
+  "dashboard": {
+      "path": "dashboard",
+      "name": "Dashboard",
+      "manager": true,
+      "superadmin": true,
+      "staff": true
+  },
+  "attendance": {
+      "path": "attendance",
+      "name": "Attendance",
+      "manager": true,
+      "superadmin": true,
+      "staff": true
+  },
+  "mark-attendance": {
+      "path": "mark-attendance",
+      "name": "Mark Attendance",
+      "manager": true,
+      "superadmin": false,
+      "staff": true
+  },
+  "staff": {
+      "path": "staff",
+      "name": "Staff",
+      "manager": true,
+      "superadmin": true,
+      "staff": false
+  },
+  "setting": {
+      "path": "setting",
+      "name": "Setting",
+      "manager": false,
+      "superadmin": true,
+      "staff": false
+  }
+}

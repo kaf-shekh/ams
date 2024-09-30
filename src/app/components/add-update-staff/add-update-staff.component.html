@@ -1,0 +1,48 @@
+<form [formGroup]="formGroup" class="row">
+  <div *ngFor="let c of form" class="form-group mb-2 col-6">
+    <div *ngIf="!c?.hidden">
+      <label class="col-md-12 mb-2 mr-1">{{c.option.label}} </label>
+      <div [ngSwitch]="c.type">
+        <div *ngSwitchCase="'date'">
+          <input type="date" class="form-control" [formControlName]="c.key" [placeholder]="c.option?.placeholder"
+            [ngClass]="{ 'is-invalid': isSubmitted && formGroup['controls'][c.key].errors}">
+          <div class="invalid-feedback" *ngIf="formGroup['controls'][c.key].errors?.['required']">
+            {{c.option.label}} is required</div>
+        </div>
+        <div *ngSwitchCase="'textarea'">
+          <textarea type="text" class="form-control" rows="4" [formControlName]="c.key"
+            [placeholder]="c.option?.placeholder"
+            [ngClass]="{ 'is-invalid': isSubmitted && formGroup['controls'][c.key].errors}"></textarea>
+          <div class="invalid-feedback" *ngIf="formGroup['controls'][c.key].errors?.['required']">
+            {{c.option.label}} is required</div>
+        </div>
+        <div *ngSwitchCase="'input'">
+          <input class="form-control" [type]="c.option.type ? c.option.type : 'text'" [formControlName]="c.key"
+            [placeholder]="c.option?.placeholder || c.option.label"
+            [ngClass]="{ 'is-invalid': isSubmitted && formGroup['controls'][c.key].errors}">
+          <div class="invalid-feedback" *ngIf="formGroup['controls'][c.key].errors?.['required']">
+            {{c.option.label}} is required</div>
+          <div class="invalid-feedback" *ngIf="formGroup['controls'][c.key].errors?.pattern">
+            {{c.option.label}} is invalid</div>
+        </div>
+        <div *ngSwitchCase="'dropdown'">
+          <select class="form-control" [formControlName]="c.key"
+            [ngClass]="{ 'is-invalid': isSubmitted && formGroup['controls'][c.key].errors}">
+            <option selected="selected" disabled>{{c.option?.placeholder}}</option>
+            <option *ngFor="let x of c?.option?.['list']" [value]="x.value">
+              <h6>{{x.name}}</h6>
+            </option>
+          </select>
+          <div class="invalid-feedback" *ngIf="formGroup['controls'][c.key].errors?.['required']">
+            {{c.option.label}} is required</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</form>
+<div class="m-4">
+  <button class="btn btn-primary mx-1" (click)="submit()"> Submit</button>
+  <button class="btn btn-secondary mx-1" (click)="cancle()"> Cancel
+  </button>
+</div>

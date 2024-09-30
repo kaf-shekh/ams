@@ -1,0 +1,74 @@
+<div class="alert alert-success" role="alert" *ngIf="currentUser">
+    <span>Hi {{currentUser?.userName}} , Welcome to AMS </span>
+ </div>
+
+<div class="card my-2">
+    <div class="card-header">User Detail</div>
+    <div class="card-body">
+        <table class="table table-striped table-hover table-bordered" *ngIf="currentUser && pageName">
+            <thead>
+                <tr>
+
+                    <th scope="col" >Action</th>
+                    <th scope="col" >Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>User Name</td>
+                    <td>{{currentUser?.userName}}</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>{{currentUser?.email}}</td>
+                </tr>
+                <tr>
+                    <td>Role</td>
+                    <td>{{currentUser?.role| uppercase}}</td>
+                </tr>
+                <tr>
+                    <td>Shift</td>
+                    <td>{{currentUser?.shift| uppercase}}</td>
+                </tr>
+                <tr>
+                    <td>Shift</td>
+                    <td>{{currentUser?.shift| uppercase}}</td>
+                </tr>
+                <tr>
+                    <td>Working Days</td>
+                    <td>{{currentUser?.workingDays| uppercase}}</td>
+                </tr>
+                <tr>
+                    <td>Working Time</td>
+                    <td>{{currentUser?.workingTime| uppercase}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header"> Allwoed Pages</div>
+    <div class="card-body">
+        <table class="table table-striped table-hover table-bordered" *ngIf="currentUser && pageName">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Pages</th>
+                    <th scope="col" class=" text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let page of pageName;let index= index">
+                    <td>{{index+1}}</td>
+                    <td><span> {{pages[page]?.name}}</span></td>
+                    <td class="text-center"><button class="btn btn-secondary" [routerLink]="['/'+ pages[page]?.path]"
+                            [queryParams]="page === 'attendance' ? {id:currentUser.id}: ''"> Visit
+                            Page</button></td>
+                </tr>
+                <tr *ngIf="pageName.length===0">
+                    <td colspan="12" class="text-center"> No record found</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

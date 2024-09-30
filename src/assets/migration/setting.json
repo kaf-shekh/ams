@@ -1,0 +1,85 @@
+{
+    "role": [
+        {
+            "id": "bb08a4684770e36d",
+            "name": "Manager",
+            "value": "manager"
+        },
+        {
+            "id": "589df85de10b2854",
+            "name": "Staff",
+            "value": "staff"
+        },
+        {
+            "id": "b5fe8e1d6c6ae326",
+            "name": "Super Admin",
+            "value": "superadmin"
+        }
+    ],
+    "shift": [
+        {
+            "id": "6a8cc6ff658cef2c",
+            "name": "Day",
+            "value": "day"
+        },
+        {
+            "id": "60daa23bdf378a0a",
+            "name": "Night",
+            "value": "night"
+        }
+    ],
+    "workingDays": [
+        {
+            "id": "25c09af238bd4c21",
+            "name": "Mon-Fri",
+            "value": "mon-fri"
+        },
+        {
+            "id": "69405791baaa6f13",
+            "name": "Mon-Sat",
+            "value": "mon-sat"
+        },
+        {
+            "id": "aba58ebbef834c4e",
+            "name": "Sun-Fri",
+            "value": "sun-fri"
+        },
+        {
+            "id": "63a7c298e2ae8a69",
+            "name": "Tue-Sun",
+            "value": "tue-sun"
+        }
+    ],
+    "workingTime": [
+        {
+            "id": "cc1bd16c12eb9a84",
+            "name": "10:00 am - 06:00 pm",
+            "value": "10:00am-06:00pm"
+        },
+        {
+            "id": "5781eca9556124a8",
+            "name": "09:00 am - 05:00 pm",
+            "value": "09:00am-05:00pm"
+        },
+        {
+            "id": "09d586063175589a",
+            "name": "11:00 am - 07:00 pm",
+            "value": "11:00am-07:00pm"
+        },
+        {
+            "id": "6240b128b41a16d5",
+            "name": "08:00 am - 04:00 pm",
+            "value": "08:00am-04:00pm"
+        },
+        {
+            "id": "5e67ee56263c9609",
+            "name": "12:00 pm - 08:00 pm",
+            "value": "12:00pm-08:00pm"
+        },
+        {
+            "id": "be40348a0bdaedb8",
+            "name": "01:00 pm - 09:00 pm",
+            "value": "01:00pm-09:00pm"
+        }
+    ]
+}

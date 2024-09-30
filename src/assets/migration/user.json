@@ -1,0 +1,79 @@
+[
+    {
+        "userName": "Kafeel Ahmad",
+        "role": "manager",
+        "shift": "day",
+        "workingDays": "mon-sat",
+        "workingTime": "09:00am-05:00pm",
+        "email": "k1@gmail.com",
+        "password": "123456",
+        "id": "428a74fd05d64f97",
+        "managerId": "00dhsd45"
+    },
+    {
+        "userName": "super admin",
+        "role": "superadmin",
+        "shift": "day",
+        "workingDays": "mon-fri",
+        "workingTime": "10:00am-06:00pm",
+        "email": "superadmin@ams.com",
+        "password": "123456",
+        "id": "7081d6f378df2822",
+        "managerId": "428a74fd05d64f97"
+    },
+    {
+        "userName": "s1 Staff",
+        "role": "staff",
+        "shift": "day",
+        "workingDays": "mon-fri",
+        "workingTime": "10:00am-06:00pm",
+        "email": "staf01@ams.com",
+        "password": "123456",
+        "id": "569a66ac6c04247b",
+        "managerId": "428a74fd05d64f97"
+    },
+    {
+        "userName": "s2k4 staff",
+        "role": "staff",
+        "shift": "night",
+        "workingDays": "sun-fri",
+        "workingTime": "08:00am-04:00pm",
+        "email": "s2@ams.com",
+        "password": "123456",
+        "id": "c901207d51e9d25f",
+        "managerId": "428a74fd05d64f97"
+    },
+    {
+        "userName": "s3k4 staff",
+        "role": "staff",
+        "shift": "day",
+        "workingDays": "tue-sun",
+        "workingTime": "09:00am-05:00pm",
+        "email": "s3@ams.com",
+        "password": "123456",
+        "id": "fde0872867b1f0c6",
+        "managerId": "428a74fd05d64f97"
+    },
+    {
+        "userName": "k1",
+        "role": "manager",
+        "shift": "night",
+        "workingDays": "mon-sat",
+        "workingTime": "09:00am-05:00pm",
+        "email": "k2@ams.com",
+        "password": "123456",
+        "id": "6a852aceeb362c92",
+        "managerId": "7081d6f378df2822"
+    },
+    {
+        "userName": "z1",
+        "role": "staff",
+        "shift": "night",
+        "workingDays": "sun-fri",
+        "workingTime": "09:00am-05:00pm",
+        "email": "z1@ams.com",
+        "password": "123456",
+        "id": "b30087566891f6b3",
+        "managerId": "6a852aceeb362c92"
+    }
+]

@@ -1,0 +1,32 @@
+<div class="card">
+  <div class="card-header">
+    <h4 class="modal-title pull-left">Mark Attendance</h4>
+  </div>
+  <div class="card-body container">
+    <!-- <div class="justify-content-center"> -->
+      <div class="row">
+        <div class="col-md-6">
+          <video #videoElement class="video-image" *ngIf="isVideoPlaying"></video>
+
+          <canvas #canvas *ngIf="isVideoPlaying" style="display: none;"></canvas>
+        </div>
+        <div class="col-md-6">
+          <div *ngIf="capturedImage">
+            <img [src]="capturedImage" class="video-image" alt="Captured Image" />
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="justify-content-center float-center">
+        <button class="btn btn-sm btn-primary" [disabled]="!isVideoPlaying && (!capturedImage || capturedImage == null)"
+          (click)="captureRetake()">{{capturedImage ? "Retake ":"Capture Image"}}</button>
+        <button class="btn btn-secondary btn-sm" (click)="save()"
+          [disabled]="!capturedImage || capturedImage == null">Save</button>
+        <button class="btn btn-secondary btn-sm" (click)="stopWebcam()">stop webcam</button>
+      </div>
+    <!-- </div> -->
+  </div>
+</div>

@@ -1,0 +1,33 @@
+[
+    {
+      "key": "role",
+      "placeholder": "Enter Role",
+      "error": "Enter valid value",
+      "pattern": "^[A-Za-z ]*$",
+      "ex": "Manager, Staff"
+    },
+    {
+      "key": "shift",
+      "placeholder": "Enter Shift",
+      "error": "Enter valid value",
+      "pattern": "^[A-Za-z ]*$",
+      "ex":" Day, Night"
+
+
+    },
+    {
+      "key": "workingTime",
+      "placeholder": "Enter Working Time",
+      "error": "Enter valid value",
+      "pattern": "^[A-Za-z0-9 -:]*$",
+      "ex": "10:00 am - 6:00 pm"
+
+    },
+    {
+      "key": "workingDays",
+      "placeholder": "Enter Working Days",
+      "error": "Enter valid value",
+      "pattern": "^[A-Za-z -]*$",
+      "ex":"Mon-Fri"
+    }
+  ]
