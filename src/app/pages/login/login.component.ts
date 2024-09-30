@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/core/auth/authentication.service';
-// import { currentUserModel, User } from '../Model/model';
 
 @Component({
   selector: 'app-login',

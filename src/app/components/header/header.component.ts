@@ -3,8 +3,7 @@ import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/core/auth/authentication.service';
 import { User } from 'src/app/models/User';
 import { DataBaseService } from 'src/app/services/data-base.service';
-// import { AuthenticationService } from '../auth/authentication.service';
-// import { currentUserModel } from '../Model/model';
+
 
 @Component({
   selector: 'app-header',
@@ -15,7 +14,6 @@ export class HeaderComponent {
   isAuthenticated: any;
   currentUser: any;
   pagePermission: any;
-  // user: currentUserModel;
 
   constructor(
     private auth: AuthenticationService,
