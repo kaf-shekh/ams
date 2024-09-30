@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import * as userPermissionData from "../assets/user-permission.json";
 import * as setting from "../assets/migration/setting.json";
 import * as users from "../assets/migration/user.json";
-import * as attendances from "../assets/migration/attendance.json";
 
 
 @Component({
@@ -33,9 +32,6 @@ export class AppComponent {
       localStorage.setItem("ams_users", JSON.stringify(ams_users.default));
     }
 
-    if (!attendanceList) {
-      let attendance_list: any = attendances
-      localStorage.setItem("ams_attendance_list", JSON.stringify(attendance_list.default));
-    }
+
   }
 }
