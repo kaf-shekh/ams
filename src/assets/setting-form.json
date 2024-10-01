@@ -1,5 +1,12 @@
 [
     {
+      "key": "role",
+      "placeholder": "Enter Role",
+      "error": "Enter valid value",
+      "pattern": "^[A-Za-z ]*$",
+      "ex": "Manager, Staff"
+    },
+    {
       "key": "shift",
       "placeholder": "Enter Shift",
       "error": "Enter valid value",

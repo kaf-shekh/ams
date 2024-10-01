@@ -11,6 +11,13 @@ In this project we initialized Attendance for Staff and Manager can take Attenda
 In this project Staff and Manager can take Attendance by capturing their photo. uses Local Stroge
 
 
+### Credential
+
+Email: superadmin@ams.com
+Password:123456
+
+All User password is 123456
+
 # Roles
 
 ## 3 Roles introduced
@@ -87,13 +94,6 @@ Only Super Admin can visit the page. And add Working time, Working Days and Shif
 #### Not included
  `Password Change functionality.`,
  `Day to Day Basis attendance, commented the code for testing purpose.` ,`Dynamic Roles Creation is not implemented`, `User Permission Form not created`
-
-### Note
-
-Email: superadmin@ams.com
-Password:123456
-
-All User password is 123456
 
 
 
