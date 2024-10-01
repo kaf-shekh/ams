@@ -163,6 +163,21 @@ export class DataBaseService {
 
         }
     }
+    getAllUsersForSuperAdmin() {
+        try {
+            if (this.getUsers.isUpdate || !this.users || !this.users?.length) {
+                let usersDB = localStorage.getItem("ams_users")
+                if (usersDB) {
+                    this.users = JSON.parse(usersDB) || [];
+                    this.users = this.users.filter((user: User) => user.role !== 'superadmin')
+                }
+                this.getUsers.isUpdate = false;
+            }
+            return this.users || [];
+        } catch (error) {
+
+        }
+    }
 
     updateUserById(id: string, user: User) {
         try {
@@ -344,7 +359,7 @@ export class DataBaseService {
         }
     }
 
-    login(req:any) {
+    login(req: any) {
         let users = this.getAllUsers();
         let userData = users.find((user: User) => user.email === req.email && user.password === req.password);
         return userData

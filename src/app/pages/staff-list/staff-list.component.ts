@@ -48,7 +48,7 @@ export class StaffListComponent {
   getUser() {
     try {
       if (this.currentUser?.role === 'superadmin') {
-        this.staff = this.databaseServie.getAllUsers();
+        this.staff = this.databaseServie.getAllUsersForSuperAdmin();
       } else if (this.currentUser?.role === 'manager') {
         this.staff = this.databaseServie.getUserByManagerId(this.currentUser?.id);
       }
