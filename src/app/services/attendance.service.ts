@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
-import { AttendanceModel } from "../models/User";
 import { DataBaseService } from "./data-base.service";
 import { Observable, of } from "rxjs";
+import { AttendanceModel } from "../models/User";
 
 @Injectable()
 export class AttendanceService {
