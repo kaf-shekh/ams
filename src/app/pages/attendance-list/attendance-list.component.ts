@@ -20,7 +20,7 @@ export class AttendanceListComponent {
   popupData: any;
   currentUser: User;
   currentDate = new Date()
-  allowAttendance: boolean = true;
+  allowAttendance: boolean = false;
   constructor(private modalService: BsModalService, private route: ActivatedRoute, private dataBaseService: DataBaseService, private authService: AuthenticationService, private commonService: CommonService) {
     this.authService.currentUser.subscribe((user) => this.currentUser = user);
     this.route.queryParams.subscribe(params => {
@@ -33,12 +33,20 @@ export class AttendanceListComponent {
 
   checkForAttendance() {
     try {
-      this.allowAttendance = true; //Remove After Testing
+      //Remove After Testing
+      if (this.currentUser?.id === this.id) {
+        this.allowAttendance = true;
+
+      }
       //Uncommet After Testing
-      // if (this.currentUser?.id === this.id && this.attendenceList?.length > 0) {
+      // if (this.currentUser?.id === this.id) {
       //   let date1 = new Date();
-      //   let date2 = new Date(this.attendenceList[this.attendenceList.length - 1].date);
-      //   this.allowAttendance = !this.commonService.compareDate(date1, date2);
+      // if (this.attendenceList.length > 0) {
+      //     let date2 = new Date(this.attendenceList[this.attendenceList.length - 1].date);
+      //     this.allowAttendance = this.attendenceList.length > 0 ? !this.commonService.compareDate(date1, date2): true;
+      // } else {
+      //   this.allowAttendance = true;
+      // }
       // }
     } catch (error) {
 
