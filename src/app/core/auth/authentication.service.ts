@@ -60,11 +60,7 @@ export class AuthenticationService {
       let userData = users.find((user: User) => user.email === req.email && user.password === req.password);
       if (userData) {
         this.setUserData(userData);
-        if (userData.role == 'staff') {
-          this.router.navigate(['attendance'], { queryParams: { id: userData.id } });
-        } else {
-          this.router.navigate(['dashboard'])
-        }
+        this.router.navigate(['dashboard'])
         return of({status:'success', message:"Welcome !!"})
       } else {
         return of({status:'failed', message:"User details not matched."})

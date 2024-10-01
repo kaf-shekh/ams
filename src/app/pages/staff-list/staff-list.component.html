@@ -27,10 +27,11 @@
                 <td>{{emp?.shift | uppercase}}</td>
                 <td>{{emp?.workingTime | uppercase}}</td>
                 <td> {{emp?.workingDays | uppercase}}</td>
-                <td><button class="btn btn-secondary" [routerLink]="['/attendance']" [queryParams]="{id:emp.id}">View</button></td>
-                <td><button class="btn btn-secondary"(click)="openModal(template,false,emp)">Edit</button></td>
+                <td><button class="btn btn-secondary" [routerLink]="['/attendance']"
+                        [queryParams]="{id:emp.id}">View</button></td>
+                <td><button class="btn btn-secondary" (click)="openModal(template,false,emp)">Edit</button></td>
             </tr>
-            <tr *ngIf="staff.length===0" >
+            <tr *ngIf="staff.length===0">
                 <td colspan="12" class="text-center"> No record found</td>
             </tr>
         </tbody>
@@ -39,12 +40,13 @@
 
 <ng-template #template>
     <div class="modal-header">
-        <h4 class="modal-title pull-left">Add Staff</h4>
+        <h4 class="modal-title pull-left">{{isAdd? 'Add Staff':'Update Staff'}}</h4>
         <button type="button" class="close btn-close pull-right" aria-label="Close" (click)="closeModal()">
             <span aria-hidden="true" class="visually-hidden">&times;</span>
         </button>
     </div>
     <div class="modal-body">
-        <app-add-update-staff [isAdd]="isAdd" [empDetail]="empDetails" (complete)="closeModal($event)"></app-add-update-staff>
+        <app-add-update-staff [isAdd]="isAdd" [empDetail]="empDetails"
+            (complete)="closeModal($event)"></app-add-update-staff>
     </div>
 </ng-template>
