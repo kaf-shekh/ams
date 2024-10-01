@@ -88,7 +88,7 @@ Only Super Admin can visit the page. And add Working time, Working Days and Shif
  `Password Change functionality.`,
  `Day to Day Basis attendance, commented the code for testing purpose.` ,`Dynamic Roles Creation is not implemented`, `User Permission Form not created`
 
-### Not included
+### Note
 
 Email: superadmin@ams.com
 Password:123456
