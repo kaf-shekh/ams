@@ -267,9 +267,10 @@ export class DataBaseService {
             let attendances = this.getAllattendanceList();
             let userAttendance = this.getAttendacebyId(attendance.userId);
             let alreadyAttendToday = false;
-            if (userAttendance) {
-                alreadyAttendToday = this.commonService.compareDate(new Date(), userAttendance[userAttendance.length - 1].date)
-            }
+            //Uncommet After Testing
+            // if (userAttendance) {
+            //     alreadyAttendToday = this.commonService.compareDate(new Date(), userAttendance[userAttendance.length - 1].date)
+            // }
             if (alreadyAttendToday) {
                 return of({ status: 200, message: "Atendance already marked !!!" })
             }
