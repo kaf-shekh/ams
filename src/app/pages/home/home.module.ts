@@ -16,6 +16,7 @@ import { PageGuard } from 'src/app/core/auth/page.gaurd';
 const routes: Routes = [
     {
         path: '', component: HomeComponent, children: [
+            { path: '', redirectTo:'dashboard', pathMatch: 'full' },
             { path: 'dashboard', component: DashboardComponent, canActivate: [PageGuard] },
             { path: 'attendance', component: AttendanceListComponent, canActivate: [PageGuard] },
             { path: 'mark-attendance', component: MarkAttendanceComponent, canActivate: [PageGuard] },
